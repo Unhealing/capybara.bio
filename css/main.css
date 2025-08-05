@@ -1,0 +1,218 @@
+:root {
+    --card-bg: rgb(5, 5, 5);
+    --card-bg-light: rgb(20, 20, 20);
+    --card-bg-lighter: rgb(30, 30, 30);
+    --link-hover: rgb(255, 100, 100);
+    --main-color: rgb(255, 0, 0);
+    --text: #d6d8e1;
+}
+
+@font-face {
+    font-family: "OldLondon";
+    src: url("/fonts/OldLondon.woff");
+}
+
+@font-face {
+    font-family: "LemonMilkBold";
+    src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf");
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: black;
+}
+
+img,
+song.full-display {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+strong {
+    font-weight: 900;
+}
+
+body {
+    background-color: black;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+div#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#content>div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
+    min-width: 10%;
+    width: 30%;
+}
+
+#content>div:nth-child(2) {
+    min-width: 40%;
+    width: 40%;
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    div#content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #content>div {
+        width: 100%;
+    }
+
+    #content>div:nth-child(2) {
+        width: 80%;
+    }
+}
+
+h1 {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: "LemonMilkBold";
+    font-size: 3rem;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    font-family: "LemonMilkBold";
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.separate.top {
+    margin-top: 0.5rem;
+}
+.separate.top-more {
+    margin-top: 1rem;
+}
+.separate.bottom {
+    margin-bottom: 0.5rem;
+}
+.separate.bottom-more {
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+h1>a:hover,
+a>h1:hover {
+    text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+    text-decoration-thickness: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+    transition: text-shadow 200ms;
+    color: var(--main-color);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-shadow: 0px 0px 10px var(--main-color),
+        0px 0px 25px var(--main-color);
+}
+
+Socials > .socials-container {
+    margin-top: 2rem;
+
+    display: flex;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-icon {
+    max-width: 2.5rem;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Related to the song autoplay script */
+
+song {
+    font-family: "OldLondon";
+    padding: 1.5rem;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+}
+
+song.full-display {
+    display: flex;
+    overflow: hidden;
+    background-color: black;
+    color: red;
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+/* Ads */
+
+.ads {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 2.5rem;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+.ads iframe {
+    border-radius: 12px;
+}
+
+.ads iframe+iframe {
+    margin-top: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--card-bg);
+}
+
+div.separator {
+    margin-top: 1rem;
+}

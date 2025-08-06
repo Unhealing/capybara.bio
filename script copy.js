@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileName = document.getElementById('profile-name');
     if (profileName) {
         profileName.addEventListener('click', function() {
-            window.location.href = "kiki"; // Change to your desired URL
+            window.location.href = "https://capybara.bio/"; // Change to your desired URL
         });
     }
 });

@@ -34,19 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const preEnter = document.getElementById('pre-enter');
-    const jsEnter = document.getElementById('js-enter');
-    if (preEnter && jsEnter) {
-        jsEnter.addEventListener('click', function() {
-            preEnter.classList.add('hide');
-            setTimeout(() => {
-                preEnter.style.display = 'none';
-            }, 800); // Match the longest transition (background-color)
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById("myAudio");
 
     var playPromise = audio.play();

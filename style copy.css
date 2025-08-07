@@ -55,7 +55,7 @@
   color: #fff;
   padding: 10px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgb(117, 19, 19);
+  box-shadow: 0 0 20px rgb(81, 19, 117);
   display: flex;
   position: absolute;
   width: 600px;
@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 20px rgb(117, 19, 19);
+  box-shadow: 0 0 20px rgb(81, 19, 117);
   border-radius: 15px;
   position: flex;
   transition: transform 0.1s;
@@ -113,7 +113,7 @@
   height: 80px;
   border-radius: 50%;
   margin-bottom: 15px;
-  box-shadow: 0 0 15px rgb(117, 19, 19), 0 0 25px rgb(117, 19, 19);
+  box-shadow: 0 0 15px rgb(81, 19, 117), 0 0 25px rgb(81, 19, 117);
 }
 
 .left-side h3 {
@@ -156,7 +156,7 @@
 
 .social-icons a:hover i,
 .social-icons a:hover .custom-icon {
-  filter: drop-shadow(0 0 10px #d30c0c) brightness(0) invert(33%) sepia(100%) saturate(500%) hue-rotate(-45deg);
+  filter: drop-shadow(0 0 10px #831ebd) brightness(0) invert(38%) sepia(100%) saturate(500%) hue-rotate(250deg);
   transform: translateY(-5px);
   transition: filter 0.3s, transform 0.3s;
 }
@@ -173,15 +173,15 @@
 
 #profile-name:hover {
   text-shadow:
-    0 0 10px #751313,
-    0 0 20px #751313,
-    0 0 30px #751313,
-    0 0 40px #751313;
-  color: #751313 !important;
+    0 0 10px #b266ff,
+    0 0 20px #b266ff,
+    0 0 30px #b266ff,
+    0 0 40px #b266ff;
+  color: #b266ff !important;
 }
 
 .social-icons a:hover {
-  color: #bd1e1e;
+  color: #831ebd;
 }
 
 .right-side .social-icons {
@@ -192,15 +192,15 @@
 .tooltip-inner {
   background-color: #000;
   color: #fff;
-  border: 1px solid #751313;
+  border: 1px solid #511375;
 }
 
 .tooltip-arrow {
-  border-top-color: #751313;
+  border-top-color: #511375;
 }
 
 .tooltip {
-  box-shadow: 0 0 10px hsl(0, 72%, 27%);
+  box-shadow: 0 0 10px hsl(278, 72%, 27%);
 }
 
 @keyframes breathing {
@@ -326,5 +326,5 @@ html, body {
 
 .social-icons a:hover::after {
   opacity: 1;
-  box-shadow: 0 0 10px rgb(117, 19, 19);
+  box-shadow: 0 0 10px rgb(81, 19, 117);
 }

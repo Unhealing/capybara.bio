@@ -1,0 +1,330 @@
+/* Website template by https://github.com/Pathetic420 */
+#pre-enter {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.849);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.849);
+  transition: opacity 0.5s, background-color 0.8s;
+}
+
+#pre-enter.hide {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+#pre-enter h2 {
+  font-size: 5em;
+  -webkit-animation: breathing 5s ease-out infinite normal;
+  animation: breathing 5s ease-out infinite normal;
+  cursor: pointer;
+  color: white;
+  transition: all .5s;
+  font-family: 'Nunito', sans-serif;
+}
+
+#pre-enter h2:hover {
+  filter: drop-shadow(0 0 0.5rem white);
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+  perspective: 1200px;
+  filter: blur(10px);
+}
+
+#pre-enter.hide ~ .background {
+  filter: blur(0);
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(25, 140, 60);
+  display: flex;
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+}
+
+.card.social-card {
+  width: 220px;
+  height: 80px;
+  top: calc(50% + 160px); /* Adjust as needed to place below main card */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: absolute;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgb(25, 140, 60);
+  border-radius: 15px;
+  position: flex;
+  transition: transform 0.1s;
+  padding: 0;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.right-side {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgb(25, 140, 60), 0 0 25px rgb(25, 140, 60);
+}
+
+.left-side h3 {
+  margin-top: 5px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.paragraph {
+  font-size: 20px;
+  text-align: left;
+  width: 100%;
+  height: 120px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.custom-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* Makes SVG white, remove for PNG */
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.social-icons i {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover i,
+.social-icons a:hover .custom-icon {
+  filter: drop-shadow(0 0 10px #831ebd) brightness(0) invert(38%) sepia(100%) saturate(500%) hue-rotate(50deg);
+  transform: translateY(-5px);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#profile-name {
+  transition: text-shadow 0.3s, color 0.3s;
+}
+
+#profile-name:hover {
+  text-shadow:
+    0 0 10px rgb(25, 140, 60),
+    0 0 20px rgb(25, 140, 60),
+    0 0 30px rgb(25, 140, 60),
+    0 0 40px rgb(25, 140, 60);
+  color: rgb(25, 140, 60) !important;
+}
+
+.social-icons a:hover {
+  color: rgb(25, 140, 60);
+}
+
+.right-side .social-icons {
+  position: relative;
+  top: -35px;
+}
+
+.tooltip-inner {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid rgb(25, 140, 60);
+}
+
+.tooltip-arrow {
+  border-top-color: rgb(25, 140, 60);
+}
+
+.tooltip {
+  box-shadow: 0 0 10px rgb(25, 140, 60);;
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+}
+
+.title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.title h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.title h1 {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 10px #b0ffb0;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  color: #8bc34a;
+}
+
+.social-icons {
+  margin-top: -5px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-below {
+  margin-top: 240px; /* space below the card, adjust as needed */
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 15px;
+  position: relative;
+  text-decoration: none;
+  /* Remove transform transition here if present */
+  transition: color 0.3s;
+}
+
+.social-icons a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+  box-shadow: 0 0 10px rgb(25, 140, 60);
+}

@@ -9,12 +9,12 @@
   
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style mart.css">
+  <link rel="stylesheet" href="mart/style mart.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" type='text/css'>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script mart.js" defer></script>
+  <script src="mart/script mart.js" defer></script>
 
   <link rel="icon" type="image/x-icon" href="other/black.ico">
 
@@ -26,17 +26,29 @@
 
   <div class="background">
     <video id="background" autoplay loop muted>
-      <source src="other/mart.mp4" type="video/mp4">
+      <source src="mart/other/mart.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
     <audio id="myAudio" loop>
-      <source src="other/mart.mp3" type="audio/mpeg"/>
+      <source src="mart/other/mart.mp3" type="audio/mpeg"/>
     </audio>
+
+  <!-- Volume control UI -->
+  <div class="volume-control">
+    <button id="volumeButton">
+      <i class="fas fa-volume-up"></i>
+    </button>
+    <input type="range" id="volumeRange" min="0" max="1" step="0.01" value="0.2" class="hidden">
+  </div>
+
+  <script src="script mart.js"></script>
+</body>
+</html>
 
 <div class="card">
   <div class="left-side">
-    <img src="other/mart.png" alt="Profile Picture" class="profile-picture">
+    <img src="mart/other/mart.png" alt="Profile Picture" class="profile-picture">
     <h3 id="profile-name" style="cursor:pointer;">MartZo</h3>
   </div>
   <div class="right-side">
@@ -52,6 +64,7 @@
   </div>
 </div>
   </div>
+
 
   <footer>
     <script src="script mart.js"></script>

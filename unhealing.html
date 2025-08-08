@@ -9,14 +9,14 @@
   
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="unhealing/style unhealing.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" type='text/css'>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js" defer></script>
+  <script src="unhealing/script unhealing.js" defer></script>
 
-  <link rel="icon" type="image/x-icon" href="other/black.ico">
+  <link rel="icon" type="image/x-icon" href="unhealing/other/black.ico">
 
 </head>
 <body>
@@ -26,17 +26,27 @@
 
   <div class="background">
     <video id="background" autoplay loop muted>
-      <source src="other/video.mp4" type="video/mp4">
+      <source src="unhealing/other/unhealing.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
     <audio id="myAudio" loop>
-      <source src="other/music.mp3" type="audio/mpeg"/>
+      <source src="unhealing/other/unhealing.mp3" type="audio/mpeg"/>
     </audio>
+
+      <!-- Volume control UI -->
+  <div class="volume-control">
+    <button id="volumeButton">
+      <i class="fas fa-volume-up"></i>
+    </button>
+    <input type="range" id="volumeRange" min="0" max="1" step="0.01" value="0.2" class="hidden">
+  </div>
+</body>
+</html>
 
 <div class="card">
   <div class="left-side">
-    <img src="other/pfp2.png" alt="Profile Picture" class="profile-picture">
+    <img src="unhealing/other/unhealing.png" alt="Profile Picture" class="profile-picture">
     <h3 id="profile-name" style="cursor:pointer;">Unhealing</h3>
   </div>
   <div class="right-side">
@@ -62,7 +72,7 @@
   </div>
 
   <footer>
-    <script src="script.js"></script>
+    <script src="script unhealing.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </footer>
 </body>

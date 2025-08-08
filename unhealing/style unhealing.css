@@ -126,7 +126,7 @@
 #volumeRange {
   -webkit-appearance: none;
   height: 6px;
-  background: linear-gradient(to right, #751313, #a11a1a));
+  background: linear-gradient(to right, #751313, #a11a1a);
   border-radius: 5px;
   outline: none;
   cursor: pointer;

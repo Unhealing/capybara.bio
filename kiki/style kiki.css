@@ -70,7 +70,7 @@
 }
 
 .card.social-card {
-  width: 400px;
+  width: 480px;
   height: 80px;
   top: calc(50% + 160px); /* Adjust as needed to place below main card */
   left: 50%;
